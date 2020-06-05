@@ -7,19 +7,19 @@ class PygmyGo < Formula
 
   if OS.mac?
     url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_darwin_amd64.tar.gz"
-    sha256 "fb68a1a4eafb265a3fe4ccc676dc46a4c47d250d67ffa1ff7446598852b20ac5"
+    sha256 "3b3ab010a9afe5a5a271841ceb61f4b5637944a7f17e1ca4ca1d5fb008d5151d"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_linux_amd64.tar.gz"
-      sha256 "74772b4bb5cd032dc9482955ab2affae401d0df156db15b28c6bc4dfecb78105"
+      sha256 "ecfa363175d4c86c23c3abad5c8803354f9c9de995141c12b4af36af7de827d1"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_linux_arm64.tar.gz"
-        sha256 "0489e7127c9e60fbe9ac6bcdf1d489de0ce22dd235818b574d387dc5b858f598"
+        sha256 "d5c3b2e380f34c4b216ac5e5213344b3a8a02a1d26874a27cd43645e2e69af0f"
       else
         url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_linux_armv6.tar.gz"
-        sha256 "38af51083e8a7888845aab6d2cc686cc846ea949937356761b933f179a36bea4"
+        sha256 "643629eb9d6786193d32ed8085dfa9cf39780cfa42b09a28000f7699458022e2"
       end
     end
   end
