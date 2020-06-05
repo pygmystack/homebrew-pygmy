@@ -7,11 +7,11 @@ class PygmyGo < Formula
 
   if OS.mac?
     url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_darwin_amd64.tar.gz"
-    sha256 "88f439a6ac3c79257a91b6a454bb76cd85a0adfe144eb139f195851c17226cfb"
+    sha256 "d134e58a393d385b37156ff1b4caceb5eafbaa9ddffce25a44a7d8ea5c4de1b9"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.3.1/pygmy-go_0.3.1_linux_amd64.tar.gz"
-      sha256 "6eecbdf8007fcf557515c153bcb8da0f1e6f4a109da75f8d65285db0a96cbd5b"
+      sha256 "3b5879cbb331c5c6231673ca162cd8d28151929bfae4c3db73fbb0797150940b"
     end
   end
 
