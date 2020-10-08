@@ -2,24 +2,24 @@
 class PygmyGo < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/fubarhouse/pygmy-go"
-  version "0.4.0"
+  version "0.5.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_darwin_amd64.tar.gz"
-    sha256 "1cdbc8e0298701e9b22647d507bea72f1b3f666eff9be15f7f420637b22dae44"
+    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.5.0/pygmy-go_0.5.0_darwin_amd64.tar.gz"
+    sha256 "984a52ededac96ad723ed5657a142d36dbce69075c6cb2a8a989b756902990c9"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_linux_amd64.tar.gz"
-      sha256 "a6b05d288f7267df4a4c4a22265b4a8bc069de81414736e0871e7498c25c0358"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.5.0/pygmy-go_0.5.0_linux_amd64.tar.gz"
+      sha256 "04457a8f09cdfad69a71b5e42068284a07370500ef2cf65321b8c2ff6327351d"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_linux_arm64.tar.gz"
-        sha256 "22e0605b1ba13f3913acfb6d3dcaacc6a2df3e7a167935b3b612ab9ff04d1e98"
+        url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.5.0/pygmy-go_0.5.0_linux_arm64.tar.gz"
+        sha256 "ba37697784e422a932ca6c38dfac537773db66f818d468348a1fe84acd8f14aa"
       else
-        url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.4.0/pygmy-go_0.4.0_linux_armv6.tar.gz"
-        sha256 "3fe30495d20dc98a3b6511aa0cd4d8b9ba79c8bac4b741ce044ca8fbce8387ee"
+        url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.5.0/pygmy-go_0.5.0_linux_armv6.tar.gz"
+        sha256 "049db213f08942005c3cbd942bb36102befaaa0ca3e75594614560b278865c20"
       end
     end
   end
