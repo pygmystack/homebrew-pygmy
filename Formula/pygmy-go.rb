@@ -5,28 +5,33 @@
 class PygmyGo < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/fubarhouse/pygmy-go"
-  version "0.6.0"
+  version "0.7.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.6.0/pygmy-go_0.6.0_darwin_amd64.tar.gz"
-    sha256 "73a4f4e8d3dc563100682129d625582bf2b266a085f313422bca183510ea3010"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_darwin_amd64.tar.gz"
+      sha256 "95aae11ac0e3d406fc1aa1105712db9ce4552e2682a0874d2f8fc77043c5a946"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_darwin_arm64.tar.gz"
+      sha256 "73d96933ab4c7f036b75f09dc87a1749951e6065def231b0397022ce95f0bdfd"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.6.0/pygmy-go_0.6.0_darwin_arm64.tar.gz"
-    sha256 "1b1ce6e5a9e01ef705f85086484be05e686f82733aa1e02a3357f04a87983031"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.6.0/pygmy-go_0.6.0_linux_amd64.tar.gz"
-    sha256 "28a88e56d290a2dc98f50703cbe849ee815f52a9dfb7a224fb7851de8eb0bfaf"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.6.0/pygmy-go_0.6.0_linux_armv6.tar.gz"
-    sha256 "e4eeb80a39ec1d693a3528aa2d38a12fca936e60b2e15451be451a106fb7b5fb"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.6.0/pygmy-go_0.6.0_linux_arm64.tar.gz"
-    sha256 "08cabb3d2cbefd90dbae88e74004bad4564f1fb47bb134f377fe5952cfdb5d41"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_amd64.tar.gz"
+      sha256 "b9155e031f8aaeed560f6d06edc6b2ff25b25558f24befe9aaf7272620106c73"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_armv6.tar.gz"
+      sha256 "97225cf3d011c7f0147a7c03658bd879c6248139c093069489c38249e61d4483"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_arm64.tar.gz"
+      sha256 "fef9e0f2553d0a25676e479339c5d7bafb5e45af6e1babee94eee046a9b6be2c"
+    end
   end
 
   def install
