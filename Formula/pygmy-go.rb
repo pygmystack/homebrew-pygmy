@@ -5,32 +5,32 @@
 class PygmyGo < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/fubarhouse/pygmy-go"
-  version "0.7.0"
+  version "0.7.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_darwin_amd64.tar.gz"
-      sha256 "95aae11ac0e3d406fc1aa1105712db9ce4552e2682a0874d2f8fc77043c5a946"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_darwin_amd64.tar.gz"
+      sha256 "f6b57df233db1c5d4c0228445c21d7f5d08e8d11c6132aa0786641dae20c5d2f"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_darwin_arm64.tar.gz"
-      sha256 "73d96933ab4c7f036b75f09dc87a1749951e6065def231b0397022ce95f0bdfd"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_darwin_arm64.tar.gz"
+      sha256 "89fdee34341cd0cf6cf9e8fea918d694210dae5ff00cfcbe05a2688ea71e09b3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_amd64.tar.gz"
-      sha256 "b9155e031f8aaeed560f6d06edc6b2ff25b25558f24befe9aaf7272620106c73"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_linux_amd64.tar.gz"
+      sha256 "fa20cb65dc832c232e71d8ee7d83bf454da4efccabdc65990bb06bc66bac88ac"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_armv6.tar.gz"
-      sha256 "97225cf3d011c7f0147a7c03658bd879c6248139c093069489c38249e61d4483"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_linux_arm.tar.gz"
+      sha256 "49d47869f38888ccb1774bff2f571cf1deea661feed1032445292d5250346233"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.0/pygmy-go_0.7.0_linux_arm64.tar.gz"
-      sha256 "fef9e0f2553d0a25676e479339c5d7bafb5e45af6e1babee94eee046a9b6be2c"
+      url "https://github.com/fubarhouse/pygmy-go/releases/download/v0.7.1/pygmy-go_0.7.1_linux_arm64.tar.gz"
+      sha256 "fa36aa8e20b74d2ef631fc7b912709e76dc8a3dc10dc5f321e016ca7f036b887"
     end
   end
 
