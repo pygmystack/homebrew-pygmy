@@ -9,16 +9,16 @@ class Pygmy < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.9.0/pygmy_0.9.0_darwin_arm64.tar.gz"
-      sha256 "0fbc28472d781e7e1171797d5ad108cbeacdfea2414484b3ecfb01610b6fbe6c"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.10.0/pygmy_0.10.0_darwin_arm64.tar.gz"
+      sha256 "22b1ef36efdc09822b21ad367c028d7ead00260605ae9acfd5df0aa1100568ca"
 
       def install
         bin.install "pygmy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.9.0/pygmy_0.9.0_darwin_amd64.tar.gz"
-      sha256 "e99c2d5a8105408c498166c64c6cf5a7bed584e92a6dbfe8fdaca5b90706b88b"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.10.0/pygmy_0.10.0_darwin_amd64.tar.gz"
+      sha256 "b3c171705db780dcd42a034ffb05123c11279262b38be0ee0a713a94717c6410"
 
       def install
         bin.install "pygmy"
@@ -28,24 +28,24 @@ class Pygmy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.9.0/pygmy_0.9.0_linux_amd64.tar.gz"
-      sha256 "4a4c479d213063dca7053dcc79ca8cf0dd8048373c7e75d8a9f91743bfb799a0"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.10.0/pygmy_0.10.0_linux_amd64.tar.gz"
+      sha256 "881fdccea53307270eb1ff8de1038b4e84039a3d4fa78f8c86070016d53a139e"
 
       def install
         bin.install "pygmy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.9.0/pygmy_0.9.0_linux_arm64.tar.gz"
-      sha256 "d9b778048cb7e222e6a7773a99c66bee3908d0ffdbc24478e94c09da8c021a99"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.10.0/pygmy_0.10.0_linux_arm64.tar.gz"
+      sha256 "f48d6b5fa93c46c7fe2a785a4dfb286ba53e9213e4c4dd889af1f536c7aa736a"
 
       def install
         bin.install "pygmy"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.9.0/pygmy_0.9.0_linux_arm.tar.gz"
-      sha256 "ced153c78d33f36a407e2b4d600b2919d4e3e36ffb088bb3e508204181e79895"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.10.0/pygmy_0.10.0_linux_arm.tar.gz"
+      sha256 "440ae26e08fa9f34b33dde9047b766091d50ba116db0a6dbaf540f876c322ad8"
 
       def install
         bin.install "pygmy"
