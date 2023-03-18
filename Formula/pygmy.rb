@@ -5,7 +5,7 @@
 class Pygmy < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/pygmystack/pygmy"
-  version "0.9.0"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.arm?
