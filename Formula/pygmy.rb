@@ -6,7 +6,10 @@ class Pygmy < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/pygmystack/pygmy"
   version "0.11.0"
-  head "https://github.com/pygmystack/pygmy.git", branch: "main"
+  head do
+    url "https://github.com/pygmystack/pygmy.git", branch: "main"
+    depends_on "go" => :build if build.head?
+  end
 
   on_macos do
     if Hardware::CPU.arm?
