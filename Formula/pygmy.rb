@@ -5,7 +5,7 @@
 class Pygmy < Formula
   desc "amazee.io's local development helper tool"
   homepage "https://github.com/pygmystack/pygmy"
-  version "0.12.0"
+  version "0.13.1"
 
   head do
     url "https://github.com/pygmystack/pygmy.git", branch: "main"
@@ -14,27 +14,27 @@ class Pygmy < Formula
   
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.12.0/pygmy_0.12.0_darwin_arm64.tar.gz"
-      sha256 "e4c28bb3a0534091af7e972d15e37add0566ff111cf04184df5e0f3bd0c22d42"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_arm64.tar.gz"
+      sha256 "481049dea6fa88fb84cb24472b9acea4f8e4648fe86a049bf84386abe83b73aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.12.0/pygmy_0.12.0_darwin_amd64.tar.gz"
-      sha256 "63f7faf99d28d8ab97c37dc9d95125f43b6149bd516e4d2058851461ae78eefd"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_amd64.tar.gz"
+      sha256 "bb1d1296b9c2b5cda817d34ffab726a9fd9728c50f4588ecd87b767c063a5cba"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.12.0/pygmy_0.12.0_linux_amd64.tar.gz"
-      sha256 "21b67874944fdd40ad65543ae0e177808e695406d261aeb8f83db855e0bc1840"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_amd64.tar.gz"
+      sha256 "c41c84db2e5bf269239e8561ab4cd43178f9d385db84f5b77d33f02bf9096410"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.12.0/pygmy_0.12.0_linux_arm64.tar.gz"
-      sha256 "7f607ee3f5f0fa939ea9b6d87faa7e27b873e20ec291f2d24d9a3bc0c1a85cb5"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_arm64.tar.gz"
+      sha256 "628c9efd464e08acd58f3bdff9930f0867b5503825c9ce98707139edf26eefe5"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.12.0/pygmy_0.12.0_linux_arm.tar.gz"
-      sha256 "48e03c9481c6f28cfd094a0ac27778631ebd5cafd20c70bbd28fd4cb8fefff68"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.12.0_linux_arm.tar.gz"
+      sha256 "a8875ad4748ce4e20d5345fbe171695034e5a4d4bdd6ee01439fdafd02bbdf3e"
     end
   end
 
