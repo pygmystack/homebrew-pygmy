@@ -43,6 +43,8 @@ class Pygmy < Formula
     if build.head?
       system "go", "build", "-o", "pygmy"
       bin.install "pygmy"
+    else
+      cp "pygmy", "."
     end
   end
 
