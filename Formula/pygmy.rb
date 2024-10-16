@@ -49,6 +49,6 @@ class Pygmy < Formula
   end
 
   test do
-    system "#{bin}/pygmy", "version"
+    system `bin/pygmy`, "version"
   end
 end
