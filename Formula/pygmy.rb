@@ -42,8 +42,8 @@ class Pygmy < Formula
   def install
     if build.head?
       system "go", "build", "-o", "pygmy"
+      bin.install "pygmy"
     end
-    bin.install "pygmy"
   end
 
   test do

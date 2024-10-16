@@ -2,9 +2,9 @@ name: Brew Audit
 
 on:
   push:
-    branches: [main, formula/fixes]
+    branches: [ main ]
   pull_request:
-    branches: [main, formula/fixes]
+    branches: [ main ]
 
 jobs:
   audit:
