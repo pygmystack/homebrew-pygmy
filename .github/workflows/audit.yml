@@ -18,8 +18,24 @@ jobs:
           brew update
           brew tap homebrew/core
 
-      - name: Audit formula
-        run: brew audit --strict --online "./Formula/pygmy.rb"
+      - name: Create temporary tap
+        run: |
+          brew tap-new ${{ github.repository_owner }}/test-tap --no-git
+          cp Formula/*.rb $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/
+
+      - name: Audit formulas
+        run: |
+          for file in $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/*
+          do
+            brew audit --strict --online "${{ github.repository_owner }}/test-tap/$(basename ${file%.rb})"
+          done
 
       - name: Test formula
-        run: brew install --build-from-source "./Formula/pygmy.rb"
+        run: |
+          for file in $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/*
+          do
+            brew install --build-from-source "${{ github.repository_owner }}/test-tap/$(basename ${file%.rb})"
+          done
+
+      - name: Remove temporary tap
+        run: brew untap ${{ github.repository_owner }}/test-tap
