@@ -36,6 +36,3 @@ jobs:
           do
             brew install --build-from-source "${{ github.repository_owner }}/test-tap/$(basename ${file%.rb})"
           done
-
-      - name: Remove temporary tap
-        run: brew untap ${{ github.repository_owner }}/test-tap
