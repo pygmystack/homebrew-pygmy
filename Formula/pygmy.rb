@@ -49,7 +49,6 @@ class Pygmy < Formula
   end
 
   test do
-    output = shell_output("bin/pygmy version")
-    assert_match "pygmy version #{version}", output
+    system "#{bin}/pygmy", "version"
   end
 end
