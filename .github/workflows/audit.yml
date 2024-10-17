@@ -1,0 +1,38 @@
+name: Brew Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Homebrew
+        run: |
+          brew update
+          brew tap homebrew/core
+
+      - name: Create temporary tap
+        run: |
+          brew tap-new ${{ github.repository_owner }}/test-tap --no-git
+          cp Formula/*.rb $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/
+
+      - name: Audit formulas
+        run: |
+          for file in $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/*
+          do
+            brew audit --strict --online "${{ github.repository_owner }}/test-tap/$(basename ${file%.rb})"
+          done
+
+      - name: Test formula
+        run: |
+          for file in $(brew --repository)/Library/Taps/${{ github.repository_owner }}/homebrew-test-tap/Formula/*
+          do
+            brew install --build-from-source "${{ github.repository_owner }}/test-tap/$(basename ${file%.rb})"
+          done
