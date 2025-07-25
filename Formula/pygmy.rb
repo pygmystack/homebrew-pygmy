@@ -31,11 +31,7 @@ class Pygmy < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_arm64.tar.gz"
-        sha256 "628c9efd464e08acd58f3bdff9930f0867b5503825c9ce98707139edf26eefe5"
-      else
-        url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_arm.tar.gz"
-        sha256 "a8875ad4748ce4e20d5345fbe171695034e5a4d4bdd6ee01439fdafd02bbdf3e"
-      end
+        sha256 "d8058e2982aedcb5d73fe5f1ebe211c8c047c0b8378658e160401fa166c7607e"
     end
   end
 
