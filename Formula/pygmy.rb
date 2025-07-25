@@ -15,18 +15,18 @@ class Pygmy < Formula
   on_macos do
     on_arm do
       url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_arm64.tar.gz"
-      sha256 "481049dea6fa88fb84cb24472b9acea4f8e4648fe86a049bf84386abe83b73aa"
+      sha256 "a46e2b7184c3e391cf618a0e4f67f06636a57d6bcee5bc43425194e35cc978c3"
     end
     on_intel do
       url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_amd64.tar.gz"
-      sha256 "bb1d1296b9c2b5cda817d34ffab726a9fd9728c50f4588ecd87b767c063a5cba"
+      sha256 "42cfcb5ceeab21216ec4813b29d2ea4a3f20790c2ae6d7018791d842ac771292"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_amd64.tar.gz"
-      sha256 "c41c84db2e5bf269239e8561ab4cd43178f9d385db84f5b77d33f02bf9096410"
+      sha256 "cb007a071a336c7c90a39d0aaa35e5790270b89df3a19bc7d8de74c30bae529b"
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
