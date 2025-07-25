@@ -14,23 +14,23 @@ class Pygmy < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_arm64.tar.gz"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_darwin_arm64.tar.gz"
       sha256 "a46e2b7184c3e391cf618a0e4f67f06636a57d6bcee5bc43425194e35cc978c3"
     end
     on_intel do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_darwin_amd64.tar.gz"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_darwin_amd64.tar.gz"
       sha256 "42cfcb5ceeab21216ec4813b29d2ea4a3f20790c2ae6d7018791d842ac771292"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_amd64.tar.gz"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_linux_amd64.tar.gz"
       sha256 "cb007a071a336c7c90a39d0aaa35e5790270b89df3a19bc7d8de74c30bae529b"
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_arm64.tar.gz"
+        url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_linux_arm64.tar.gz"
         sha256 "d8058e2982aedcb5d73fe5f1ebe211c8c047c0b8378658e160401fa166c7607e"
       end
     end
