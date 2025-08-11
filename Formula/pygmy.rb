@@ -5,7 +5,7 @@
 class Pygmy < Formula
   desc "Local development helper tool brought to you by amazee.io"
   homepage "https://github.com/pygmystack/pygmy"
-  version "0.13.2"
+  version "0.14.0"
 
   head do
     url "https://github.com/pygmystack/pygmy.git", branch: "main"
@@ -14,24 +14,24 @@ class Pygmy < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_darwin_arm64.tar.gz"
-      sha256 "a46e2b7184c3e391cf618a0e4f67f06636a57d6bcee5bc43425194e35cc978c3"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.14.0/pygmy_0.14.0_darwin_arm64.tar.gz"
+      sha256 "55f6c704924f816b22e16485667df365ee2589d5396ecaa96f454377723449f4"
     end
     on_intel do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_darwin_amd64.tar.gz"
-      sha256 "42cfcb5ceeab21216ec4813b29d2ea4a3f20790c2ae6d7018791d842ac771292"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.14.0/pygmy_0.14.0_darwin_amd64.tar.gz"
+      sha256 "853315f7f30dacd7a3a3b3cc95ad76d7c2e114df0285f6f82837bc7f3cb367ba"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_linux_amd64.tar.gz"
-      sha256 "cb007a071a336c7c90a39d0aaa35e5790270b89df3a19bc7d8de74c30bae529b"
+      url "https://github.com/pygmystack/pygmy/releases/download/v0.14.0/pygmy_0.14.0_linux_amd64.tar.gz"
+      sha256 "750fc2589ad468b74645ae4b4a3fcc2f174eeccf0c69d596e31e4f537aa9fc8d"
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pygmystack/pygmy/releases/download/v0.13.2/pygmy_0.13.2_linux_arm64.tar.gz"
-        sha256 "d8058e2982aedcb5d73fe5f1ebe211c8c047c0b8378658e160401fa166c7607e"
+        url "https://github.com/pygmystack/pygmy/releases/download/v0.14.0/pygmy_0.14.0_linux_arm64.tar.gz"
+        sha256 "9ac04fa3576abf895f696b13543f04d2f9034c94034ff7bf85e543012835e988"
       end
     end
   end
