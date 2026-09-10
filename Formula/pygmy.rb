@@ -5,7 +5,6 @@
 class Pygmy < Formula
   desc "Local development helper tool brought to you by amazee.io"
   homepage "https://github.com/pygmystack/pygmy"
-  version "0.15.0"
 
   head do
     url "https://github.com/pygmystack/pygmy.git", branch: "main"
